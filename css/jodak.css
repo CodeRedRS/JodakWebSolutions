@@ -1,0 +1,97 @@
+/* COLORS */
+.bg-green {
+    background-color: #0EEA2D;
+}
+
+.text-green {
+    color: #0EEA2D;
+}
+
+.bg-yellow {
+    background-color: #FFF300;
+}
+
+.text-yellow {
+    color: #FFF300;
+}
+
+.bg-blue {
+    background-color: #00B7F2;
+}
+
+.text-blue {
+    color: #00B7F2;
+}
+
+.bg-pink {
+    background-color: #FD00FF;
+}
+
+.text-pink {
+    color: #FD00FF;
+}
+
+.bg-orange {
+    background-color: #FF9933;
+}
+
+.text-orange {
+    color: #FF9933;
+}
+
+/* NAV */
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: solid 3px transparent;
+
+    transition: border-color .5s ease-in-out, color .5s ease-in-out;
+    -webkit-transition: border-color .5s ease-in-out, color .5s ease-in-out;
+    -moz-transition: border-color .5s ease-in-out, color .5s ease-in-out;
+    -o-transition: border-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:active {
+    color: #FF9933;
+    border-top-color: #FF9933;
+    background-color: transparent;
+}
+
+/* OTHER */
+.intro {
+    display: table;
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    color: #FFF;
+    text-transform: uppercase;
+
+    background: url("http://i.imgur.com/7PmGxFA.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    display: inline-block;
+    text-transform: uppercase;
+    border: solid white 2px;
+    background-color: rgba(21, 21, 21, 0.75);
+}
+
+.inner h1 {
+    margin: 10px;
+}
