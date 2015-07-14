@@ -1,3 +1,13 @@
+/* DEFAULTS */
+* {
+    color: #777;
+}
+
+section {
+    clear: both;
+    padding: 15px 0;
+}
+
 /* COLORS */
 .bg-green {
     background-color: #0EEA2D;
@@ -39,9 +49,19 @@
     color: #FF9933;
 }
 
+.bg-white {
+    background-color: #FFF;
+    color: inherit;
+}
+
+.bg-off-white {
+    background-color: #FAFAFA;
+    color: inherit;
+}
+
 /* NAV */
 .navbar-default .navbar-nav > li > a {
-    color: #777;
+    color: inherit;
     font-weight: bold;
     text-transform: uppercase;
     border-top: solid 3px transparent;
@@ -61,12 +81,12 @@
 
 /* OTHER */
 .intro {
+    clear: both;
     display: table;
-    position: absolute;
-    height: 50%;
     width: 100%;
     color: #FFF;
     text-transform: uppercase;
+    padding: 10% 0;
 
     background: url("http://i.imgur.com/7PmGxFA.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -86,12 +106,39 @@
 }
 
 .inner {
+    margin: 0 15px;
     display: inline-block;
     text-transform: uppercase;
-    border: solid white 2px;
+    border: solid #FFF 2px;
     background-color: rgba(21, 21, 21, 0.75);
 }
 
 .inner h1 {
+    color: #FFF;
     margin: 10px;
+}
+
+/* HORIZONTAL LINE */
+hr.orange {
+    margin: 2px auto 3%;
+    text-align: center;
+    width: 10%;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, rgba(255, 153, 51, 0.75), transparent);
+}
+
+/* PROGRESS BAR */
+.progress-bar-orange {
+    background-image: -webkit-linear-gradient(top, #FF9933 0%, #DA8025 100%);
+    background-image: -o-linear-gradient(top, #FF9933 0%, #DA8025 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9933), to(#DA8025));
+    background-image: linear-gradient(to bottom, #FF9933 0%, #DA8025 100%);
+    background-repeat: repeat-x;
+}
+
+.progress-font {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
 }
