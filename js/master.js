@@ -9,10 +9,10 @@ var navHtml = "<nav class='navbar navbar-default navbar-fixed-top'><div class='c
     "<span class='icon-bar'></span></button><a class='navbar-brand' href='#'>{{LOGO}}</a></div>" +
     "<div class='collapse navbar-collapse' id='collapse'><ul class='nav navbar-nav navbar-right navigation'><li>" +
     "<a href='index.html' class='color'>Home</a></li>" +
-    "<li><a href='#' class='color'>About</a></li>" +
-    "<li><a href='#' class='color'>Portfolio</a></li>" +
-    "<li><a href='#' class='color'>Services</a></li>" +
-    "<li><a href='#' class='color'>Contact</a></li>" +
+    "<li><a href='about.html' class='color'>About</a></li>" +
+    "<li><a href='portfolio.html' class='color'>Portfolio</a></li>" +
+    "<li><a href='services.html' class='color'>Services</a></li>" +
+    "<li><a href='contact.html' class='color'>Contact</a></li>" +
     "</ul></div></div></nav>";
 
 // FOOTER HTML
