@@ -1,6 +1,29 @@
 /* DEFAULTS */
 * {
     color: #777;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 50px;
+    background-color: #FAFAFA;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 50px;
+    background-color: #FFF;
+}
+.footer-text {
+    font-weight: lighter;
+    font-size: 15px;
 }
 
 section {
@@ -72,21 +95,50 @@ section {
     -o-transition: border-color .5s ease-in-out, color .5s ease-in-out;
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:active {
+.navbar-default .navbar-nav > li > a:hover.green,
+.navbar-default .navbar-nav > li > a:active.green {
+    color: #0EEA2D;
+    border-top-color: #0EEA2D;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:hover.yellow,
+.navbar-default .navbar-nav > li > a:active.yellow {
+    color: #FFF300;
+    border-top-color: #FFF300;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:hover.blue,
+.navbar-default .navbar-nav > li > a:active.blue {
+    color: #00B7F2;
+    border-top-color: #00B7F2;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:hover.pink,
+.navbar-default .navbar-nav > li > a:active.pink {
+    color: #FD00FF;
+    border-top-color: #FD00FF;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:hover.orange,
+.navbar-default .navbar-nav > li > a:active.orange {
     color: #FF9933;
     border-top-color: #FF9933;
     background-color: transparent;
 }
 
 /* OTHER */
+ul.navigation li {
+    width: 100px;
+    text-align: center;
+}
 .intro {
     clear: both;
     display: table;
     width: 100%;
     color: #FFF;
     text-transform: uppercase;
-    padding: 10% 0;
+    padding: 7% 0;
+    margin-top: 50px;
 
     background: url("http://i.imgur.com/7PmGxFA.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -119,21 +171,63 @@ section {
 }
 
 /* HORIZONTAL LINE */
-hr.orange {
+hr.faded {
     margin: 2px auto 3%;
     text-align: center;
     width: 10%;
     border: 0;
     height: 2px;
+}
+.faded.green {
+    background-image: linear-gradient(to right, transparent, rgba(14, 234, 45, 0.75), transparent);
+}
+.faded.yellow {
+    background-image: linear-gradient(to right, transparent, rgba(255, 243, 0, 0.75), transparent);
+}
+.faded.blue {
+    background-image: linear-gradient(to right, transparent, rgba(0, 183, 242, 0.75), transparent);
+}
+.faded.pink {
+    background-image: linear-gradient(to right, transparent, rgba(253, 0, 255, 0.75), transparent);
+}
+.faded.orange {
     background-image: linear-gradient(to right, transparent, rgba(255, 153, 51, 0.75), transparent);
 }
 
 /* PROGRESS BAR */
-.progress-bar-orange {
-    background-image: -webkit-linear-gradient(top, #FF9933 0%, #DA8025 100%);
-    background-image: -o-linear-gradient(top, #FF9933 0%, #DA8025 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9933), to(#DA8025));
-    background-image: linear-gradient(to bottom, #FF9933 0%, #DA8025 100%);
+.progress-bar.green {
+    background-image: -webkit-linear-gradient(top, #0EEA2D 0%, #0BBB24 100%);
+    background-image: -o-linear-gradient(top, #0EEA2D 0%, #0BBB24 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0EEA2D), to(#0BBB24));
+    background-image: linear-gradient(to bottom, #0EEA2D 0%, #0BBB24 100%);
+    background-repeat: repeat-x;
+}
+.progress-bar.yellow {
+    background-image: -webkit-linear-gradient(top, #FFF300 0%, #CCC200 100%);
+    background-image: -o-linear-gradient(top, #FFF300 0%, #CCC200 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF300), to(#CCC200));
+    background-image: linear-gradient(to bottom, #FFF300 0%, #CCC200 100%);
+    background-repeat: repeat-x;
+}
+.progress-bar.blue {
+    background-image: -webkit-linear-gradient(top, #00B7F2 0%, #0092C2 100%);
+    background-image: -o-linear-gradient(top, #00B7F2 0%, #0092C2 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00B7F2), to(#0092C2));
+    background-image: linear-gradient(to bottom, #00B7F2 0%, #0092C2 100%);
+    background-repeat: repeat-x;
+}
+.progress-bar.pink {
+    background-image: -webkit-linear-gradient(top, #FD00FF 0%, #CA00CC 100%);
+    background-image: -o-linear-gradient(top, #FD00FF 0%, #CA00CC 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FD00FF), to(#CA00CC));
+    background-image: linear-gradient(to bottom, #FD00FF 0%, #CA00CC 100%);
+    background-repeat: repeat-x;
+}
+.progress-bar.orange {
+    background-image: -webkit-linear-gradient(top, #FF9933 0%, #CC7A29 100%);
+    background-image: -o-linear-gradient(top, #FF9933 0%, #CC7A29 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9933), to(#CC7A29));
+    background-image: linear-gradient(to bottom, #FF9933 0%, #CC7A29 100%);
     background-repeat: repeat-x;
 }
 
