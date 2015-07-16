@@ -17,7 +17,7 @@ var navHtml = "<nav class='navbar navbar-default navbar-fixed-top'><div class='c
 
 // FOOTER HTML
 // ===========
-var footerHtml = "<footer class='text-center navbar-default'>" +
+var footerHtml = "<footer class='text-center navbar-default hidden-xs'> " +
     "<span class='navbar-brand text-center footer-text'>Jodak Web Solutions <i class='fa fa-copyright'></i> 2015</span>" +
     "</footer>";
 
@@ -29,14 +29,15 @@ $('#footer').replaceWith(footerHtml);
 // RANDOM COLOR
 // ============
 var rand = Math.floor((Math.random() * 4) + 1);
+rand = 1;
 var color = $('.color');
 switch (rand) {
     case 1:
-        color.addClass('green');
-        break;
-    case 2:
     default:
         color.addClass('orange');
+        break;
+    case 2:
+        color.addClass('green');
         break;
     case 3:
         color.addClass('blue');

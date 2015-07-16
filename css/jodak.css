@@ -5,24 +5,30 @@
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
-html {
+html, body {
     position: relative;
     min-height: 100%;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
-    /* Margin bottom by footer height */
-    margin-bottom: 50px;
     background-color: #FAFAFA;
 }
-
 footer {
     position: absolute;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
+    left: 0;
     height: 50px;
     background-color: #FFF;
+}
+
+.body {
+    width: 100%;
+    margin-top: 65px;
 }
 
 .footer-text {
@@ -40,40 +46,20 @@ section {
     background-color: #0EEA2D;
 }
 
-.text-green {
-    color: #0EEA2D;
-}
-
 .bg-yellow {
     background-color: #FFF300;
-}
-
-.text-yellow {
-    color: #FFF300;
 }
 
 .bg-blue {
     background-color: #00B7F2;
 }
 
-.text-blue {
-    color: #00B7F2;
-}
-
 .bg-pink {
     background-color: #FD00FF;
 }
 
-.text-pink {
-    color: #FD00FF;
-}
-
 .bg-orange {
     background-color: #FF9933;
-}
-
-.text-orange {
-    color: #FF9933;
 }
 
 .bg-white {
@@ -88,24 +74,28 @@ section {
 
 /* LINKS */
 .color {
-    transition: color .5s ease-in-out;
-    -webkit-transition: color .5s ease-in-out;
-    -moz-transition: color .5s ease-in-out;
-    -o-transition: color .5s ease-in-out;
+    transition: color .6s ease-in-out;
+    -webkit-transition: color .6s ease-in-out;
+    -moz-transition: color .6s ease-in-out;
+    -o-transition: color .6s ease-in-out;
 }
 
 .green:hover, .green:active {
     color: #0EEA2D;
 }
+
 .yellow:hover, .yellow:active {
     color: #FFF300;
 }
+
 .blue:hover, .blue:active {
     color: #00B7F2;
 }
+
 .pink:hover, .pink:active {
     color: #FD00FF;
 }
+
 .orange:hover, .orange:active {
     color: #FF9933;
 }
@@ -117,10 +107,10 @@ section {
     text-transform: uppercase;
     border-top: solid 3px transparent;
 
-    transition: border-color .5s ease-in-out, color .5s ease-in-out;
-    -webkit-transition: border-color .5s ease-in-out, color .5s ease-in-out;
-    -moz-transition: border-color .5s ease-in-out, color .5s ease-in-out;
-    -o-transition: border-color .5s ease-in-out, color .5s ease-in-out;
+    transition: border-color .6s ease-in-out, color .6s ease-in-out;
+    -webkit-transition: border-color .6s ease-in-out, color .6s ease-in-out;
+    -moz-transition: border-color .6s ease-in-out, color .6s ease-in-out;
+    -o-transition: border-color .6s ease-in-out, color .6s ease-in-out;
 }
 
 .navbar-default .navbar-nav > li > a:hover.green,
@@ -159,11 +149,16 @@ section {
 }
 
 /* OTHER */
+.no-space {
+    padding: 0 !important;
+    margin: 0 !important;
+}
 .color {
     color: #777;
 }
 
 h1.title {
+    text-align: center;
     text-transform: uppercase;
     font-weight: lighter;
     margin: 0;
@@ -206,7 +201,7 @@ ul.navigation li {
     padding: 7% 0;
     margin-top: 0;
 
-    background: url("http://i.imgur.com/7PmGxFA.jpg") no-repeat center center fixed;
+    background: url("http://i.imgur.com/7PmGxFA.jpg") no-repeat center center fixed !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -238,7 +233,7 @@ ul.navigation li {
 
 /* HORIZONTAL LINE */
 hr.faded {
-    margin: 2px auto 3%;
+    margin: 2px auto 5px;
     text-align: center;
     width: 10%;
     border: 0;
@@ -316,6 +311,7 @@ hr.faded {
 img {
     padding: 15px;
 }
+
 img.greyscale {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -323,11 +319,66 @@ img.greyscale {
     filter: grayscale(100%);
 }
 
+.portfolio-grid {
+    padding: 2px;
+}
+
+div.portfolio-grid {
+    padding: 0;
+}
+
 img.full {
     max-height: 100%;
     max-width: 100%;
 }
+
 img.half {
     max-height: 50%;
     max-width: 50%;
+}
+
+.img-sm {
+    max-height: 10%;
+    max-width: 10%;
+}
+.img-md {
+    max-height: 20%;
+    max-width: 20%;
+}
+.img-lg {
+    max-height: 30%;
+    max-width: 30%;
+}
+
+/* BUTTONS */
+.button {
+    cursor: pointer;
+    margin: 0 15px;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.button.active.green {
+    border: solid 1px #0EEA2D;
+    color: #0EEA2D;
+}
+
+.button.active.yellow {
+    border: solid 1px #FFF300;
+    color: #FFF300;
+}
+
+.button.active.blue {
+    border: solid 1px #00B7F2;
+    color: #00B7F2;
+}
+
+.button.active.pink {
+    border: solid 1px #FD00FF;
+    color: #FD00FF;
+}
+
+.button.active.orange {
+    border: solid 1px #FF9933;
+    color: #FF9933;
 }
