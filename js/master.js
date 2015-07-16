@@ -6,7 +6,7 @@
 var navHtml = "<nav class='navbar navbar-default navbar-fixed-top'><div class='container'><div class='navbar-header'>" +
     "<button type='button' class='navbar-toggle collapsed' data-toggle='collapse'data-target='#collapse' aria-expanded='false'>" +
     "<span class='sr-only'>Toggle navigation</span> <span class='icon-bar'></span><span class='icon-bar'></span>" +
-    "<span class='icon-bar'></span></button><a class='navbar-brand' href='#'>{{LOGO}}</a></div>" +
+    "<span class='icon-bar'></span></button><a class='navbar-brand' href=index.html>{{LOGO}}</a></div>" +
     "<div class='collapse navbar-collapse' id='collapse'><ul class='nav navbar-nav navbar-right navigation'><li>" +
     "<a href='index.html' class='color'>Home</a></li>" +
     "<li><a href='about.html' class='color'>About</a></li>" +
@@ -28,24 +28,21 @@ $('#footer').replaceWith(footerHtml);
 
 // RANDOM COLOR
 // ============
-var rand = Math.floor((Math.random() * 5) + 1);
+var rand = Math.floor((Math.random() * 4) + 1);
 var color = $('.color');
 switch (rand) {
     case 1:
-        color.addClass('green').removeClass('color');
+        color.addClass('green');
         break;
     case 2:
-        color.addClass('yellow').removeClass('color');
+    default:
+        color.addClass('orange');
         break;
     case 3:
-        color.addClass('blue').removeClass('color');
+        color.addClass('blue');
         break;
     case 4:
-        color.addClass('pink').removeClass('color');
-        break;
-    case 5:
-    default:
-        color.addClass('orange').removeClass('color');
+        color.addClass('pink');
         break;
 
 }
