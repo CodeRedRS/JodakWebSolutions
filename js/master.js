@@ -17,7 +17,7 @@ var navHtml = "<nav class='navbar navbar-default navbar-fixed-top'><div class='c
 
 // FOOTER HTML
 // ===========
-var footerHtml = "<footer class='text-center navbar-default hidden-xs'> " +
+var footerHtml = "<footer class='text-center navbar-default'> " +
     "<span class='navbar-brand text-center footer-text'>Jodak Web Solutions <i class='fa fa-copyright'></i> 2015</span>" +
     "</footer>";
 
