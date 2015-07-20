@@ -31,17 +31,19 @@
             <hr class="faded color text-center">
         </section>
 
-        <div class="text-center">
-            <ul class="list-inline">
-                <li class="button active color text-center center-block" id="btnLuxe">Luxe Curbing</li>
-                <li class="button color text-center center-block" id="btnPosh">Posh Patio</li>
-            </ul>
-        </div>
-        <div style="height: 375px; overflow: hidden;">
-            <div style="position: relative;" id="images">
-                <!-- LUXE -->
-                <div style="position: absolute; top: 0; left: 0; width: 100%;" class="center-block portfolio"
-                     id="imgLuxe">
+        <div id="exampleImages" class="carousel slide" data-ride="carousel" data-interval="0" style="padding: 0 0 10px">
+
+            <!-- Buttons for slides -->
+            <div class="text-center">
+                <ul class="list-inline">
+                    <li id="btnLuxe" data-target="#exampleImages" data-slide-to="0" class="button active color text-center center-block">Luxe Curbing</li>
+                    <li id="btnPosh" data-target="#exampleImages" data-slide-to="1" class="button color text-center center-block">Posh Patio</li>
+                </ul>
+            </div>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active" id="imgLuxe">
                     <div class="col-sm-3 col-xs-6 no-space">
                         <div class="col-xs-6 portfolio-grid"><img
                                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=LUXE CURBING IMAGE&w=500&h=500"
@@ -78,9 +80,7 @@
                     </div>
                 </div>
 
-                <!-- POSH -->
-                <div style="position: absolute; top: 0; left: 0; width: 100%; display: none;"
-                     class="center-block portfolio" id="imgPosh">
+                <div class="item" id="imgPosh">
                     <div class="col-sm-3 col-xs-6 no-space">
                         <div class="col-xs-6 portfolio-grid"><img
                                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=POSH PATIO IMAGE&w=500&h=500"
@@ -118,6 +118,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -171,11 +172,8 @@
             $('.button').removeClass('active', 'slow', 'linear');
             $(this).addClass('active', 'slow', 'linear');
 
-            $('.portfolio').hide("slide", {direction: 'left'}, 'slow');
-            $(imgId).show("slide", {direction: 'right'}, 'slow');
             current = imgId;
         }
-
     });
 </script>
 
