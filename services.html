@@ -24,21 +24,144 @@
 <body>
 <span id="nav"></span>
 
-<div class="container-fluid bg-off-white body">
+<div class="container-fluid bg-white body">
     <div class="row">
         <section>
             <div class="center-block">
                 <h1 class="title">Services</h1>
                 <hr class="faded color">
                 <div class="col-xs-12 text-center services">
-                    <div class="col-sm-3 color"><i class="fa fa-microphone fa-3x"></i><h3>Social Media</h3></div>
-                    <div class="col-sm-3 color"><i class="fa fa-gears fa-3x"></i><h3>Clean Code</h3></div>
-                    <div class="col-sm-3 color"><i class="fa fa-clock-o fa-3x"></i><h3>Quick Process</h3></div>
-                    <div class="col-sm-3 color"><i class="fa fa-mobile-phone fa-3x"></i><h3>Mobile Compatible</h3></div>
+                    <div class="col-sm-3 color button" data-target="#ourServices" data-slide-to="0"><i
+                            class="fa fa-search fa-3x"></i>
+
+                        <h3>Search Engine Optimization</h3></div>
+                    <div class="col-sm-3 color button" data-target="#ourServices" data-slide-to="1"><i
+                            class="fa fa-gears fa-3x"></i>
+
+                        <h3>Web Design</h3></div>
+                    <div class="col-sm-3 color button" data-target="#ourServices" data-slide-to="2"><i
+                            class="fa fa-paint-brush fa-3x"></i>
+
+                        <h3>Graphic Design</h3></div>
+                    <div class="col-sm-3 color button" data-target="#ourServices" data-slide-to="3"><i
+                            class="fa fa-print fa-3x"></i>
+
+                        <h3>Print Materials</h3></div>
                 </div>
             </div>
         </section>
+    </div>
+</div>
 
+<div class="row bg-off-white" style="height: 100%;">
+    <div id="ourServices" class="carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+            <!-- SEARCH ENGINE OPTIMIZATION -->
+            <div class="item active">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="title text-center" style="margin-top: 15px;">Search Engine Optimization</h1>
+                        <hr class="faded color">
+                        <div class="col-md-4 hidden-sm hidden-xs"><img src="http://placehold.it/1500x1500" class="full">
+                        </div>
+                        <div class="col-md-8">
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WEB DESIGN -->
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="title text-center" style="margin-top: 15px;">Web Design</h1>
+                        <hr class="faded color">
+                        <div class="col-md-4 hidden-sm hidden-xs"><img src="http://placehold.it/1500x1500" class="full">
+                        </div>
+                        <div class="col-md-8">
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRAPHIC DESIGN -->
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="title text-center" style="margin-top: 15px;">Graphic Design</h1>
+                        <hr class="faded color">
+                        <div class="col-md-4 hidden-sm hidden-xs"><img src="http://placehold.it/1500x1500" class="full">
+                        </div>
+                        <div class="col-md-8">
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRINT MATERIALS -->
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="title text-center" style="margin-top: 15px;">Print Materials</h1>
+                        <hr class="faded color">
+                        <div class="col-md-4 hidden-sm hidden-xs"><img src="http://placehold.it/1500x1500" class="full">
+                        </div>
+                        <div class="col-md-8">
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                            <p><span class="lorem"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Left and right controls -->
+            <div class="hidden-lg hidden-md hidden-sm">
+                <a class="left carousel-control" href="#ourServices" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#ourServices" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+
+        </div>
     </div>
 </div>
 <span id="footer"></span>
@@ -48,5 +171,22 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/master.js"></script>
+<script src="js/lorem-ipsum.js"></script>
+
+<script>
+    var current;
+    $('.button').click(function () {
+        var btnId = $(this).attr('id');
+        var imgId = ('#' + btnId.replace('btn', 'img'));
+
+        if (current != imgId) {
+            $('.button').removeClass('active', 'slow', 'linear');
+            $(this).addClass('active', 'slow', 'linear');
+
+            current = imgId;
+        }
+    });
+</script>
+
 </body>
 </html>

@@ -23,7 +23,7 @@ html, body {
 
 body {
     display: table;
-    background-color: #FAFAFA;
+    background-color: #FFF;
 }
 
 nav {
@@ -35,7 +35,6 @@ footer {
     display: table-row;
     height: 50px;
     width: 100%;
-    background-color: #FFF;
 }
 
 .body, footer {
@@ -83,6 +82,9 @@ section {
 }
 
 .bg-off-white {
+    -webkit-box-shadow: inset 0 5px 10px #FFF;
+    box-shadow: inset 0 5px 10px #FFF;
+
     background-color: #FAFAFA;
     color: inherit;
 }
@@ -393,11 +395,14 @@ img.set-lg {
 }
 
 /* BUTTONS */
-.button {
-    cursor: pointer;
+li.button {
     margin: 0 15px;
     padding: 5px;
     border: 1px solid transparent;
+}
+
+.button {
+    cursor: pointer;
 }
 
 .button.active.green {
@@ -426,7 +431,6 @@ img.set-lg {
 }
 
 /* LIST */
-
 @media (min-width: 768px) {
     .services div:not(:last-child) {
         border-right: 1px solid rgba(0, 0, 0, 0.15);

@@ -17,7 +17,7 @@ var navHtml = "<nav class='navbar navbar-default navbar-fixed-top'><div class='c
 
 // FOOTER HTML
 // ===========
-var footerHtml = "<footer class='text-center navbar navbar-default'> " +
+var footerHtml = "<footer class='text-center navbar navbar-default shadow'> " +
     "<span class='navbar-brand text-center footer-text'>Jodak Web Solutions <i class='fa fa-copyright'></i> 2015</span>" +
     "<ul class='nav navbar-nav navbar-right navigation' id='colors'>" +
     "<li class='bg-green' onclick='setSessionColor(\"green\");' style=''></li>" +
@@ -39,7 +39,7 @@ var colorClass = $('.color');
 var allColors = 'orange green blue pink yellow';
 
 function setSessionColor(color) {
-    sessionStorage.setItem('color', color);
+    localStorage.setItem('color', color);
     pageColor();
 }
 
@@ -49,33 +49,33 @@ $(document).ready(function () {
 
 function pageColor() {
     colorClass.removeClass(allColors);
-    switch (sessionStorage.getItem('color')) {
+    switch (localStorage.getItem('color')) {
         case 1:
         case 'orange':
         case 'default':
         default:
             colorClass.addClass('orange');
-            sessionStorage.setItem('color', 'orange');
+            localStorage.setItem('color', 'orange');
             break;
         case 2:
         case 'green':
             colorClass.addClass('green');
-            sessionStorage.setItem('color', 'green');
+            localStorage.setItem('color', 'green');
             break;
         case 3:
         case 'blue':
             colorClass.addClass('blue');
-            sessionStorage.setItem('color', 'blue');
+            localStorage.setItem('color', 'blue');
             break;
         case 4:
         case 'pink':
             colorClass.addClass('pink');
-            sessionStorage.setItem('color', 'pink');
+            localStorage.setItem('color', 'pink');
             break;
         case 5:
         case 'yellow':
             colorClass.addClass('yellow');
-            sessionStorage.setItem('color', 'yellow');
+            localStorage.setItem('color', 'yellow');
             break;
     }
 }
