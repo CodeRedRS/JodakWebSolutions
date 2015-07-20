@@ -17,8 +17,14 @@ var navHtml = "<nav class='navbar navbar-default navbar-fixed-top'><div class='c
 
 // FOOTER HTML
 // ===========
-var footerHtml = "<footer class='text-center navbar-default'> " +
+var footerHtml = "<footer class='text-center navbar navbar-default'> " +
     "<span class='navbar-brand text-center footer-text'>Jodak Web Solutions <i class='fa fa-copyright'></i> 2015</span>" +
+    "<ul class='nav navbar-nav navbar-right navigation' id='colors'>" +
+    "<li class='bg-green' onclick='setSessionColor(\"green\");' style=''></li>" +
+    "<li class='bg-yellow' onclick='setSessionColor(\"yellow\");'></li>" +
+    "<li class='bg-blue' onclick='setSessionColor(\"blue\");'></li>" +
+    "<li class='bg-pink' onclick='setSessionColor(\"pink\");'></li>" +
+    "<li class='bg-orange' onclick='setSessionColor(\"orange\");'></li></ul>" +
     "</footer>";
 
 // REPLACE NAV/FOOT
@@ -28,22 +34,48 @@ $('#footer').replaceWith(footerHtml);
 
 // RANDOM COLOR
 // ============
-var rand = Math.floor((Math.random() * 4) + 1);
-rand = 1;
-var color = $('.color');
-switch (rand) {
-    case 1:
-    default:
-        color.addClass('orange');
-        break;
-    case 2:
-        color.addClass('green');
-        break;
-    case 3:
-        color.addClass('blue');
-        break;
-    case 4:
-        color.addClass('pink');
-        break;
+var color = Math.floor((Math.random() * 4) + 1);
+var colorClass = $('.color');
+var allColors = 'orange green blue pink yellow';
 
+function setSessionColor(color) {
+    sessionStorage.setItem('color', color);
+    pageColor();
+}
+
+$(document).ready(function () {
+    pageColor();
+});
+
+function pageColor() {
+    colorClass.removeClass(allColors);
+    switch (sessionStorage.getItem('color')) {
+        case 1:
+        case 'orange':
+        case 'default':
+        default:
+            colorClass.addClass('orange');
+            sessionStorage.setItem('color', 'orange');
+            break;
+        case 2:
+        case 'green':
+            colorClass.addClass('green');
+            sessionStorage.setItem('color', 'green');
+            break;
+        case 3:
+        case 'blue':
+            colorClass.addClass('blue');
+            sessionStorage.setItem('color', 'blue');
+            break;
+        case 4:
+        case 'pink':
+            colorClass.addClass('pink');
+            sessionStorage.setItem('color', 'pink');
+            break;
+        case 5:
+        case 'yellow':
+            colorClass.addClass('yellow');
+            sessionStorage.setItem('color', 'yellow');
+            break;
+    }
 }
